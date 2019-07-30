@@ -6,7 +6,10 @@ from candidate_dictionary import candidates
 from extract_tweet_content import text_extract
 from extract_tweet_content import pull_sentiment_polar_subjective
 
-
+"""
+	Scatter plots of 4 candidates showing
+		 sentiment of all retrievable tweets
+"""
 
 def plot_with_axes(row, column, subjectivity, polarity, color):
 	ax[row, column].scatter(subjectivity, polarity, s=15, alpha=0.3,
