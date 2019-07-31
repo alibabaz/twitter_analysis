@@ -13,3 +13,8 @@ Files featuring ways to:
   - Sentiment analysis to determine polarity / subjectivity of tweets
   
 4) Visualizations of extracts or analyzed data 
+
+
+To do:
+  - find out what items ('keywords') lead to most response
+  - location analysis of followers
