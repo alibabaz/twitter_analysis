@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns; sns.set()
 from handle_file_dict import handle_dict
 from candidate_dictionary import candidates
-from extract_tweet_content import text_extract
-from extract_tweet_content import pull_sentiment_polar_subjective
+from extract_tweets_full import text_extract
+from extract_tweets_full import pull_sentiment_polar_subjective
 import numpy as np
 
 def plot_hist_axes(row, column, polarity, user_name, x):

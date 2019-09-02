@@ -10,6 +10,9 @@ import numpy as np
 """
 Compare TWO candidates sentiment normally vs when talking about a topic
 
+In terminal - provide information about how many tweets were able to find
+about the topic & normally, in order to see if looking @ the topic is useful
+
 Expansion of indiv_fit_sentiment_about_trump.py
 **Really the big difference is with how the axis are called and invoked
 	the current way of calling them uses an external variable(z) to pull
@@ -20,6 +23,7 @@ def plot_control(user_name, coords_1, coords_2, topic):
 	#coords_1 --> polarity(top) &  coords_2 --> subjectivity (bottom)
 	#sentiment of ALL tweets
 	pol_all, subj_all = full_tweet_sentiment(user_name)
+	print("The number of total tweets for {} is: {}".format(user_name, len(pol_all)))
 	extract_convert_plot(pol_all, coords_1, "All tweets", 'green')
 	extract_convert_plot(subj_all, coords_2, "All tweets", 'green')
 
@@ -27,6 +31,8 @@ def plot_control(user_name, coords_1, coords_2, topic):
 	pol_topic, subj_topic = extract_about_topic(user_name, topic=topic)
 	extract_convert_plot(pol_topic, coords_1, "Only '{}'".format(topic), 'blue')
 	extract_convert_plot(subj_topic, coords_2, "Only '{}'".format(topic), 'blue')
+	print("The number of tweets for {} about {} is: {}".format(user_name, topic, len(pol_topic)))
+	print("The percentage of tweets about {} is: {}".format(topic, (len(pol_topic) / len(pol_all))))
 
 	plot_axes(coords_1, "Polarity", user_name)
 	plot_axes(coords_2, "Subjectivity", user_name)

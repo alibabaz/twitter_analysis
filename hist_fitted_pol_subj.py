@@ -8,6 +8,7 @@ from extract_tweets_about_trump import extract_about_trump
 import numpy as np
 
 """
+	-THIS IS ONLY COMPARING ABOUT TRUMP - NEED TO MAKE MORE GENERIC ONE
 	- See how three candidates stack up in the polarity & subjectivity 
 		of what they say (by %) - 
 	- Conversion fxn ('convert_array'): will remove all the ZERO

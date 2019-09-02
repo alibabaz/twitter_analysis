@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 import seaborn; seaborn.set()
 from handle_file_dict import handle_dict
 from candidate_dictionary import candidates
-from extract_tweet_content import text_extract
-from extract_tweet_content import pull_sentiment_polar_subjective
+from extract_tweets_full import text_extract
+from extract_tweets_full import pull_sentiment_polar_subjective
 
 if __name__ == "__main__":
 	plt.figure(figsize=(12,7))
